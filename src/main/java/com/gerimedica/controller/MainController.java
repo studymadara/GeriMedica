@@ -51,4 +51,5 @@ public class MainController
     public @ResponseBody boolean deleteAllData() throws IOException {
         return productDeleteService.deleteAllData();
     }
+
 }
