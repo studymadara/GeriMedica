@@ -59,9 +59,14 @@ public class ProductUploadService
             productDetailsList.add(productDetails);
         }
 
-        productDao.saveAll(productDetailsList);
+        if (!productDetailsList.isEmpty())
+        {
+            productDao.saveAll(productDetailsList);
+            return "All Data Added SuccessFully!";
+        }
+        else
+            return "No Data found";
 
-        return "All Data Added SuccessFully!";
     }
 
 
