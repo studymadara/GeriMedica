@@ -14,7 +14,6 @@ import java.util.Date;
 @Builder
 public class ProductDetails
 {
-    @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Getter(AccessLevel.NONE)
@@ -27,6 +26,7 @@ public class ProductDetails
     private String codeListCode;
 
     @Column
+    @Id
     private String code;
 
     @Column
