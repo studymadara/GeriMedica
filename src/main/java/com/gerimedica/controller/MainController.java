@@ -51,12 +51,4 @@ public class MainController
     public @ResponseBody boolean deleteAllData() throws IOException {
         return productDeleteService.deleteAllData();
     }
-
-    @ExceptionHandler
-    public String handleAnyException(Exception exception)
-    {
-        exception.printStackTrace();
-        return "Can you try later!";
-    }
-
 }

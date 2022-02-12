@@ -1,5 +1,6 @@
 package com.gerimedica.service;
 
+import ch.qos.logback.core.net.SyslogOutputStream;
 import com.gerimedica.dao.ProductDao;
 import com.gerimedica.entity.ProductDetails;
 import org.apache.commons.csv.CSVFormat;
@@ -7,6 +8,7 @@ import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.BufferedReader;
@@ -38,8 +40,6 @@ public class ProductUploadService
         Iterable<CSVRecord> csvRecords=csvParser.getRecords();
 
         List<ProductDetails> productDetailsList=new ArrayList<>();
-
-
 
         ProductDetails productDetails;
 

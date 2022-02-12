@@ -43,4 +43,5 @@ public class ProductDetails
 
     @Column
     private Integer sortingPriority;
+
 }
